@@ -1,0 +1,33 @@
+[
+  {
+    "id": 0,
+    "href": "dashboard",
+    "title": "Dashboard",
+    "'icon": "CiHome"
+  },
+  {
+    "id": 1,
+    "href": "account",
+    "title": "Account"
+  },
+  {
+    "id": 2,
+    "href": "brokers",
+    "title": "Brokers"
+  },
+  {
+    "id": 3,
+    "href": "submissions",
+    "title": "Submissions"
+  },
+  {
+    "id": 4,
+    "href": "organization",
+    "title": "Organization"
+  },
+  {
+    "id": 5,
+    "href": "goals&rules",
+    "title": "Goals & Rules"
+  }
+]
