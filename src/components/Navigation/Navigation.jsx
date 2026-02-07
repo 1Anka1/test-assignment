@@ -1,20 +1,16 @@
-import { NavLink } from 'react-router-dom';
-import navigation from '../../data/navigations.json';
 import * as SC from './Navigation.styled';
-import { CiHome, CiUser } from 'react-icons/ci';
+import { Icons } from '../../helpers/utils/navigations';
 
 export const Navigation = () => {
   return (
     <SC.NavBar>
       <SC.NavList>
-        {navigation.map(({ id, href, title }) => (
-          <SC.NavListItem
-            key={id}
-            iconColor="var(--accent-blue-color)"
-            hoverColor="white"
-          >
-            <CiHome size={25} />
-            <SC.NavLinkItems to={href}>{title}</SC.NavLinkItems>
+        {Icons.map(({ id, href, title, icon }) => (
+          <SC.NavListItem key={id}>
+            <SC.NavLinkItems to={href}>
+              {icon}
+              {title}
+            </SC.NavLinkItems>
           </SC.NavListItem>
         ))}
       </SC.NavList>

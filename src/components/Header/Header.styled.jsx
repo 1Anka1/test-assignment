@@ -5,51 +5,39 @@ export const HeaderContent = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid ${(p) => p.theme.colors.border};
 `;
 
 export const HeaderTitle = styled.h1`
-  font-size: 32px;
-  font-weight: 200;
-  letter-spacing: 1px;
+  font-size: ${(p) => p.theme.fontSizes.l}px;
+  font-weight: ${(p) => p.theme.fontWeights.light};
+  letter-spacing: 2px;
 `;
 
 export const HeaderActions = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: ${(p) => p.theme.space[3]}px;
 `;
 
 export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: ${(p) => p.theme.space[3]}px;
 `;
 
 export const SearchInput = styled.input`
   width: 450px;
-  padding: 15px;
-  font-size: 16px;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  padding: ${(p) => p.theme.space[3]}px;
+  font-size: ${(p) => p.theme.fontSizes.m}px;
+  color: ${(p) => p.theme.colors.text};
+  background-color: ${(p) => p.theme.colors.background};
   border: none;
-  border-radius: 25px;
+  border-radius: ${(p) => p.theme.radius.round};
 
   &:focus {
     outline: none;
     color: var(--light-color);
     background-color: var(--avatar-bg);
   }
-`;
-
-export const Avatar = styled.div`
-  width: 45px;
-  height: 45px;
-  border-radius: 30px;
-  background-color: var(--avatar-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 16px;
 `;

@@ -7,51 +7,39 @@ export const NavBar = styled.nav`
 
 export const NavList = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: ${(p) => p.theme.space[3]}px;
 `;
 
 export const NavListItem = styled.li`
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 5px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  white-space: nowrap;
-  background-color: var(--accent-black-color);
-  color: ${(props) => props.iconColor || 'var(--accent-blue-color)'};
-  transition:
-    background-color 0.2s var(--timing-function),
-    color 0.2s var(--timing-function);
-
-  &:hover {
-    background-color: var(--accent-blue-color);
-    color: ${(props) => props.hoverColor || 'white'};
-  }
-
-  &.active {
-    background-color: ${(props) =>
-      props.activeBgColor || 'var(--accent-blue-color)'};
-    color: ${(props) => props.activeColor || 'white'};
-  }
-
-  & > svg {
-    color: inherit;
-    transition: color 0.2s var(--timing-function);
-  }
+  gap: ${(p) => p.theme.space[2]}px;
 `;
 
 export const NavLinkItems = styled(NavLink)`
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-  color: var(--light-color);
+  gap: ${(p) => p.theme.space[2]}px;
+  padding: 10px 20px;
+  border: 1px solid ${(p) => p.theme.colors.border};
+  border-radius: ${(p) => p.theme.radius.round};
+  background-color: ${(p) => p.theme.colors.accentBlack};
+  border-radius: 15px;
+  color: ${(p) => p.theme.colors.secondary};
+  font-weight: ${(p) => p.theme.fontWeights.medium};
   text-decoration: none;
   cursor: pointer;
 
-  transition:
-    color 0.2s,
-    background-color 0.2s;
+  & > svg {
+    color: ${(p) => p.theme.colors.accentBlue};
+  }
+
+  &.active {
+    color: ${(p) => p.theme.colors.light};
+    background-color: ${(p) => p.theme.colors.accentBlue};
+
+    & > svg {
+      color: ${(p) => p.theme.colors.light};
+    }
+  }
 `;
