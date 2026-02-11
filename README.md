@@ -45,8 +45,26 @@
 
 ## Overview
 
-**Test Assignment** is a modern React development toolkit that provides a minimal yet powerful setup for building scalable web applications. Leveraging Vite for rapid builds and Hot Module Replacement (HMR), it ensures a smooth development experience. The project emphasizes code quality through ESLint enforcement and offers a modular architecture with reusable hooks, themes, and shared UI components.  
+**Test Assignment** 
+This project was developed as a technical assignment for a frontend developer interview. It demonstrates a modular React application setup focused on scalability, maintainability, and clean UI implementation.
 
+Technologies Used
+- React
+- Vite
+- JavaScript
+- ESLint
+- CSS / Styled components
+
+Libraries:
+- axios – HTTP client for API requests
+- react-router-dom – client-side routing
+- react-icons – icon library
+- react-spinners – loading indicators
+- recharts – data visualization (charts)
+
+AI Tools Used
+- GPT (used for assistance with code structuring, documentation, and development guidance)
+  
 > ⚠️ Note: This project was created as a technical assignment for the Intern developer position.
 
 ---
