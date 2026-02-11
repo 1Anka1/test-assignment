@@ -1,14 +1,12 @@
-import { getClients } from '../../../api/clients-api';
-import useDataAPI from '../../../hooks/UseDataAPI';
 import * as SC from './TableWork.styled';
 import { useMemo, useState } from 'react';
 import { WrapperBar } from '../../shared/ui/WrapperBar/WrapperBar';
 import { Table } from '../../shared/ui/Table/Table';
 import { workColumns } from '../../../helpers/utils/table/columns';
 import { workRenderMap } from '../../../helpers/utils/table/columnRenderers';
+import { Loader } from '../../shared/ui/Loader/Loader';
 
-export const TableWork = () => {
-  const { data, isLoading } = useDataAPI(getClients);
+export const TableWork = ({ data, isLoading }) => {
   const [filter, setFilter] = useState('all');
 
   const counts = useMemo(() => {
@@ -37,7 +35,7 @@ export const TableWork = () => {
       : data.filter((i) => i.statusQueue === filter);
   }, [data, filter]);
 
-  if (isLoading) return <p>Loading.....</p>;
+  if (isLoading) return <Loader />;
 
   return (
     <WrapperBar title={'Work Queue'}>

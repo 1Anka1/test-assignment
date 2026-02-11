@@ -1,3 +1,4 @@
+import { useDataContext } from '../../helpers/utils/useContext/useDataContex';
 import { Section } from '../shared/Layout/Layout.styled';
 import { MarketIntel } from './MarketIntel/MarketIntel';
 import { Portfolio } from './Portfolio/Portfolio';
@@ -6,11 +7,13 @@ import { TableWork } from './TableWork/TableWork';
 import * as SC from './WorkQueue.styled';
 
 export const WorkQueue = () => {
+  const { data, isLoading } = useDataContext();
+
   return (
     <Section>
       <SC.WorkWrapper>
         <SC.TableArea>
-          <TableWork />
+          <TableWork data={data} isLoading={isLoading} />
         </SC.TableArea>
 
         <SC.PortfolioArea>

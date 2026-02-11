@@ -1,14 +1,15 @@
-import { getClients } from '../../api/clients-api';
-import useDataAPI from '../../hooks/UseDataAPI';
 import { myAccountColumns } from '../../helpers/utils/table/columns';
 import { Table } from '../shared/ui/Table/Table';
 import { WrapperBar } from '../shared/ui/WrapperBar/WrapperBar';
 import { accountRenderMap } from '../../helpers/utils/table/columnRenderers';
 import * as SC from './MyAccount.styled';
 import { useState } from 'react';
+import { Loader } from '../shared/ui/Loader/Loader';
+import { useDataContext } from '../../helpers/utils/useContext/useDataContex';
 
 export const MyAccount = () => {
-  const { data, isLoading } = useDataAPI(getClients);
+  const { data, isLoading } = useDataContext();
+
   const [search, setSearch] = useState('');
 
   const btnData = ['Filter', 'Sort', 'Group', '+ New'];
@@ -18,7 +19,7 @@ export const MyAccount = () => {
     item.company?.name?.toLowerCase().includes(search.toLowerCase()),
   );
 
-  if (isLoading) return <p>Loading.....</p>;
+  if (isLoading) return <Loader />;
 
   return (
     <WrapperBar title={'MyAccount'}>

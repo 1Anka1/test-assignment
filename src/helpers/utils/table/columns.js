@@ -1,3 +1,5 @@
+//Table Titles:
+
 export const workColumns = [
   'ORIGINATOR',
   'CLIENT/LINE',
@@ -20,8 +22,10 @@ export const myAccountColumns = [
   'WINNABILITY',
 ];
 
+//Status in Work Queue
 export const statusQueue = ['New', 'Pending Rewiew', 'Completed'];
 
+//Data in My account
 export const accountDataMap = {
   1: {
     PREMIUM: '$2.3M',
