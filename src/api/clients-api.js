@@ -1,5 +1,5 @@
 import axios from 'axios';
-import status from '../data/status.json';
+import { statusQueue } from '../helpers/utils/table/columns';
 
 const getClientAPI = axios.create({
   baseURL: 'https://dummyjson.com/users',
@@ -13,10 +13,9 @@ export async function getClients() {
 
     const newData = sliceData.map((el) => {
       const random = Math.floor(Math.random() * 3);
-      el.status = status[random];
+      el.statusQueue = statusQueue[random];
       return el;
     });
-    console.log(newData);
 
     return newData;
   } catch (error) {

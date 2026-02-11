@@ -1,9 +1,8 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const QuickBtn = styled.button`
   width: 250px;
-  padding: 10px 20px;
+  padding: 13px 20px;
   color: ${(p) => p.theme.colors.light};
   background-color: ${(p) => p.theme.colors.accentBlue};
   border-radius: ${(p) => p.theme.radius.round};
@@ -18,5 +17,6 @@ export const QuickBtn = styled.button`
 export const QuickActionslist = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: ${(p) => p.theme.space[2]}px;
 `;

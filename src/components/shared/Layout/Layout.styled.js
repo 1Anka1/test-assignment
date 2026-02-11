@@ -5,8 +5,12 @@ export const Container = styled.div`
   max-width: 1600px;
   width: 100%;
   padding: 0 16px;
+
+  @media (max-width: 1024px) {
+    padding: 0 12px;
+  }
 `;
 
 export const Section = styled.section`
-  padding-top: 30px;
+  padding-bottom: 30px;
 `;

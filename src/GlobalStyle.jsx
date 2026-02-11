@@ -44,8 +44,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     display: block;
     margin: 0;
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: ${(p) => p.theme.colors.primary};
+    color: ${(p) => p.theme.colors.light};
     font: 200 18px/1.5 ${(p) => p.theme.fonts.body};
   }
 `;

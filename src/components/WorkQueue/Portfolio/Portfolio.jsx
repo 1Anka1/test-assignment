@@ -1,16 +1,20 @@
-import { WrapperBar } from '../../shared/WrapperBar/WrapperBar';
 import { BusinessTarget } from './BusinessTarget/BusinessTarget';
-import { LossTarget } from './LossTarget/LossTarget';
+import { businessCharts, portfolioCharts } from './config.js/config';
+import { PortfolioTargetChart } from './PortfolioTargetChart/PortfolioTargetChart';
 import * as SC from './Portfolio.styled';
-import { RetentionTarget } from './Retention/Retention';
+import { WrapperBar } from '../../shared/ui/WrapperBar/WrapperBar';
 
 export const Portfolio = () => {
   return (
-    <WrapperBar title={'Portfolio goals'}>
+    <WrapperBar title="Portfolio goals">
       <SC.Wrapper>
-        <LossTarget />
-        <RetentionTarget />
-        <BusinessTarget title={'NEW BUSINESS TARGET'} />
+        {portfolioCharts.map((chart) => (
+          <PortfolioTargetChart key={chart.id} {...chart} />
+        ))}
+
+        {businessCharts.map((chart) => (
+          <BusinessTarget key={chart.id} {...chart} />
+        ))}
       </SC.Wrapper>
     </WrapperBar>
   );

@@ -1,13 +1,12 @@
-import { NavLink } from 'react-router-dom';
-import { quickActions } from '../../../helpers/utils/quickActions';
-import { WrapperBar } from '../../shared/WrapperBar/WrapperBar';
+import action from '../../../data/actions.json';
+import { WrapperBar } from '../../shared/ui/WrapperBar/WrapperBar';
 import * as SC from './QuickAction.styled';
 
 export const QuickAction = () => {
   return (
     <WrapperBar title={'Quick Action'}>
       <SC.QuickActionslist>
-        {quickActions.map(({ id, name, href }) => (
+        {action.map(({ id, name }) => (
           <li key={id}>
             <SC.QuickBtn>{name}</SC.QuickBtn>
           </li>

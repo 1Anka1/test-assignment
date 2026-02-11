@@ -3,7 +3,6 @@ export const WrapperBar = ({ children, title }) => {
   return (
     <SC.WrapperBar>
       <SC.Title> {title}</SC.Title>
-
       {children}
     </SC.WrapperBar>
   );

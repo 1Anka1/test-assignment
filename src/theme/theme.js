@@ -1,13 +1,13 @@
 export const theme = Object.freeze({
-  space: [0, 4, 8, 18, 32, 64, 128, 256, 512],
+  space: [0, 5, 8, 18, 32, 64, 128, 256, 512],
 
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: 'inherit',
     table: 'Lucida Sans Unicode, Lucida Grande, Sans-Serif',
   },
 
   fontSizes: {
+    xxs: 6,
     xs: 12,
     s: 14,
     m: 16,
@@ -33,20 +33,21 @@ export const theme = Object.freeze({
     secondary: '#93a2b8',
     accentBlack: '#0c0f17',
     accentBlue: '#3b82f5',
+    tableColor: '#232838',
     border: '#293247',
     light: '#ffff',
     background: '#1e2233',
     avatarBg: '#19285e',
     text: '#4a5366',
 
-    new: '#3b82f5',
-    pending: '#fcd060',
-    completed: '#3cba7b',
+    blue: '#3b82f5',
+    yellow: '#fcd060',
+    green: '#3cba7b',
   },
 
   radius: {
     none: '0',
-    round: '15px',
+    round: '25px',
   },
 
   shadows: {

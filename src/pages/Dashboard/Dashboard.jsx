@@ -1,3 +1,4 @@
+import { MyAccount } from '../../components/MyAccount/MyAccount';
 import {
   Container,
   Section,
@@ -8,9 +9,8 @@ export const Dashboard = () => {
   return (
     <Section>
       <Container>
-        <div>
-          <WorkQueue />
-        </div>
+        <WorkQueue />
+        <MyAccount />
       </Container>
     </Section>
   );

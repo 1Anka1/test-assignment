@@ -1,28 +1,27 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 420px;
-  background: #1f253b;
-  padding: 20px;
-  border-radius: 16px;
+  padding: ${(p) => p.theme.space[1]}px;
+  border-radius: ${(p) => p.theme.radius.round};
 `;
 
 export const Title = styled.h2`
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: ${(p) => p.theme.fontSizes.ml};
+  margin-bottom: ${(p) => p.theme.space[1]}px;
 `;
 
 export const Label = styled.p`
-  font-size: 12px;
-  color: #9aa4c2;
+  font-size: ${(p) => p.theme.fontSizes.xs};
+  color: ${(p) => p.theme.colors.secondary};
 `;
 
 export const ChartWrapper = styled.div`
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: ${(p) => p.theme.space[1]}px;
   display: flex;
 `;
 
 export const TargetValue = styled.span`
-  color: #fff;
+  font-weight: ${(p) => p.theme.fontWeights.medium};
+  padding-top: 15px;
 `;
