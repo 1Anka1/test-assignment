@@ -23,11 +23,6 @@ export const theme = Object.freeze({
     bold: 900,
   },
 
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-  },
-
   colors: {
     primary: '#121521',
     secondary: '#93a2b8',
@@ -50,10 +45,7 @@ export const theme = Object.freeze({
     round: '25px',
   },
 
-  shadows: {
-    boxShadow: '0px 0px 4px 3px gray',
-    buttonsShadow: ' 0 1px 1px #2d2020',
-    deletButton: '3px 3px 3px 0 red',
-    textShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) ',
+  cubic: {
+    timingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
   },
 });

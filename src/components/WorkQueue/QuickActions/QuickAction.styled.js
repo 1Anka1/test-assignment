@@ -11,6 +11,9 @@ export const QuickBtn = styled.button`
   &:hover {
     color: ${(p) => p.theme.colors.accentBlue};
     background-color: ${(p) => p.theme.colors.accentBlack};
+    transition:
+      color 0.3s ${(p) => p.theme.cubic.timingFunction},
+      background-color 0.3s ${(p) => p.theme.cubic.timingFunction};
   }
 `;
 

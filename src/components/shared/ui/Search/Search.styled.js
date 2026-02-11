@@ -11,8 +11,11 @@ export const SearchInput = styled.input`
 
   &:focus {
     outline: none;
-    color: var(--light-color);
-    background-color: var(--avatar-bg);
+    color: ${(p) => p.theme.colors.light};
+    background-color: ${(p) => p.theme.colors.avatarBg};
+    transition:
+      color 0.3s ${(p) => p.theme.cubic.timingFunction},
+      background-color 0.3s ${(p) => p.theme.cubic.timingFunction};
   }
 
   @media (max-width: 1024px) {

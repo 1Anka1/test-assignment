@@ -36,5 +36,8 @@ export const SortButton = styled.button`
   &:hover {
     color: ${(p) => p.theme.colors.light};
     background-color: ${(p) => p.theme.colors.accentBlue};
+    transition:
+      color 0.3s ${(p) => p.theme.cubic.timingFunction},
+      background-color 0.3s ${(p) => p.theme.cubic.timingFunction};
   }
 `;
